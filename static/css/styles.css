@@ -8,12 +8,19 @@
     src: url(../fonts/pixel-nes.ttf);
 }
 
+@font-face {
+    font-family: "klarissa";
+    src: url(../fonts/klarissa-regular.ttf);
+}
+
 a {
     color: unset;
     text-decoration: none;
 }
 
 header {
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,4 +51,20 @@ nav dl dt a:link {
 
 nav dl dt a:active {
     color: yellow;
+}
+
+#content {
+    text-align: center;
+    margin: 40px;
+}
+
+.subheading {
+    font-family: "NES";
+    color: rgb(25, 25, 25);
+}
+
+.section {
+    padding-top: 5px;
+    padding-bottom: 50px;
+    font-family:'Courier New', Courier, monospace;
 }
