@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "NES";
+    src: url(../fonts/pixel-nes.ttf);
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border: none;
+    background-color:midnightblue;
+}
+
+#webtitle {
+    font-family: "NES";
+    color:khaki;
+}
+
+nav {
+    padding-left: 30px;
+    color: white;
+    font-family: "NES";
+    font-size: large;
+}
+
+nav dl dt {
+    display: inline;
+}
+
+nav dl dt a:link {
+    color: white;
+}
+
+nav dl dt a:active {
+    color: yellow;
+}
