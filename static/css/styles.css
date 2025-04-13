@@ -22,7 +22,7 @@ a {
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 120px;
+    scroll-padding-top: 110px;
 }
 
 body {
@@ -68,7 +68,7 @@ nav dl dt a:active {
 
 #content {
     padding-top: 40px;
-    padding-bottom: 500px;      /* so that the jump links don't fail because we have reached the end of the page */
+    padding-bottom: 800px;      /* so that the jump links don't fail because we have reached the end of the page */
     margin: auto;
     width: 60%;
     min-width: 300px;
