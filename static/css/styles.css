@@ -108,6 +108,7 @@ nav dl dt a:active {
     grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
     gap: 10px;
     width: 100%;
+    justify-items: center;
 }
 
 .favs {
@@ -116,6 +117,50 @@ nav dl dt a:active {
     border-width: 5px;
     border-style: inset;
     border-color: white;
+}
+
+#birthplace {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    gap: 15px;
+    width: 100%;
+    justify-items: center;
+}
+
+#birthplace figure {
+    max-width: 225px;
+}
+
+#birthplace figure figcaption {
+    max-width: 100%;
+}
+
+.bahrain {
+    margin-top: 15px;
+    width: 225px;
+    height: 195px;
+    border-width: 5px;
+    border-style: inset;
+    border-color: white;
+}
+
+#cvsection {
+    display: flex;
+    flex-direction: column;
+}
+
+#download {
+    margin-top: 20px;
+    font-family: "NES";
+    font-size: medium;
+    color: khaki;
+    padding: 10px;
+    border-width: 5px;
+    border-style: outset;
+    background-color: rgb(30, 30, 30);
+    border-color:dimgray;
+    text-align: center;
+    align-self: center;
 }
 
 /* Mobile support */
