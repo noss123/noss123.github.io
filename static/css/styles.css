@@ -20,9 +20,20 @@ a {
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+}
+
+body {
+    background-color:rgb(235, 235, 200);
+    height: 100%;
+}
+
 header {
     position: sticky;
     top: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,11 +67,17 @@ nav dl dt a:active {
 }
 
 #content {
-    text-align: center;
-    margin: 40px;
+    padding-top: 40px;
+    padding-bottom: 500px;      /* so that the jump links don't fail because we have reached the end of the page */
+    margin: auto;
+    width: 60%;
+    min-width: 300px;
+    max-width: 800px;
+    text-align: left;
 }
 
 .subheading {
+    text-align: center;
     font-family: "NES";
     color: rgb(25, 25, 25);
 }
@@ -69,4 +86,74 @@ nav dl dt a:active {
     padding-top: 5px;
     padding-bottom: 50px;
     font-family:'Courier New', Courier, monospace;
+}
+
+#profile {
+    overflow: hidden;       /* to ensure image doesn't spill over to disturb next section */
+}
+
+.pfp {
+    float: right;
+    width: auto;
+    height: auto;
+    max-width: 40%;
+    max-height: 150px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    object-fit: contain;
+}
+
+#posters {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+    gap: 10px;
+    width: 100%;
+}
+
+.favs {
+    margin-top: 15px;
+    max-height: 150px;
+    border-width: 5px;
+    border-style: inset;
+    border-color: white;
+}
+
+/* Mobile support */
+@media (max-width: 559px) {
+    html {
+        scroll-padding-top: 160px;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    #webtitle {
+        align-self: flex-start;     /* positions the object on the left even if flex-direction changes */
+    }
+
+    nav {
+        align-self: flex-start;
+        padding-top: 5px;
+        padding-left: 0;
+    }
+
+    #content {
+        padding-left: 40px;
+        padding-right: 40px;
+        width: 90%;
+    }
+
+    #intro {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pfp {
+        align-self: center;
+        max-width: 120px;
+        max-height: 120px;
+        margin: 0;
+        margin-bottom: 15px;
+    }
 }
