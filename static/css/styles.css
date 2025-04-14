@@ -144,6 +144,35 @@ nav dl dt a:active {
     border-color: white;
 }
 
+#technical {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    width: 100%;
+    justify-items: center;
+}
+
+.skills {
+    color: black;
+    background-color: beige;
+    border-width: 2px;
+    border-style: solid;
+    display: flex;
+    align-items: center;
+    width: 200px;
+    font-family: "NES";
+}
+
+.skills p {
+    padding-right: 10px;
+}
+
+.icon {
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+}
+
 #cvsection {
     display: flex;
     flex-direction: column;
