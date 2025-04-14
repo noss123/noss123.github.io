@@ -192,6 +192,21 @@ nav dl dt a:active {
     align-self: center;
 }
 
+footer {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    color: white;
+    background-color: #0f0f0f;
+    padding: 15px 20px;
+}
+
+footer a {
+    color: khaki;
+    font-weight: bold;
+}
+
 /* Mobile support */
 @media (max-width: 559px) {
     html {
