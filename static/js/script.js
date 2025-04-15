@@ -15,6 +15,10 @@ function ifclicked(event) {
         object = "div";
     } else if (["p", "h1", "h2", "h3", "h4", "h5", "h6", "ul", "dl", "ol", "li", "dt", "dd", "i", "b"].includes(tag)) {
         object = "text";
+    } else if (tag === "textarea") {
+        object = "textarea";
+    } else if (tag === "button") {
+        object = "button";
     } else if (tag === "header") {
         object = "header";
     } else if (tag === "footer") {
@@ -24,7 +28,7 @@ function ifclicked(event) {
     } else if (tag === "body") {
         object = "body";
     }
-    record("click", object)
+    record("click", object);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -77,4 +81,25 @@ function processing() {
     document.getElementById("spaces").textContent = spaces;
     document.getElementById("newlines").textContent = newlines;
     document.getElementById("specials").textContent = specials;
+
+    let tokens = text.split(/\s+/g).filter(Boolean);
+
+    const pronouns = [
+        "i", "you", "he", "she", "it", "we", "they",
+        "me", "you", "him", "her", "it", "us", "them",
+        "mine", "yours", "hers", "ours", "theirs",
+        "myself", "yourself", "himself", "herself", "itself", "ourselves", "yourselves", "themselves"
+    ];
+
+    const prepositions = [
+        "about", "above", "across", "after", "against", "along", "among", "around", 
+        "before", "behind", "below", "beneath", "beside", "between", "beyond", "by", 
+        "despite", "during", "except", "for", "from", "in", "inside", "into", "near", 
+        "of", "off", "on", "onto", "out", "outside", "over", "past", "since", "through", 
+        "throughout", "till", "to", "toward", "under", "underneath", "until", "up", 
+        "upon", "with", "within", "without"
+    ];
+
+    const indefs = ["a", "an"];
+    
 }
