@@ -191,6 +191,26 @@ nav dl dt a:active {
     align-self: center;
 }
 
+textarea {
+    min-height: 100px;
+    width: 100%
+}
+
+#submitfb {
+    display: block;
+    margin: auto;
+    font-family: "NES";
+    font-size: small;
+    padding: 10px;
+    text-align: center;
+}
+
+#inputwarning {
+    display: none;
+    color: red;
+    font-style: italic;
+}
+
 footer {
     display: flex;
     justify-content: space-around;
