@@ -102,4 +102,58 @@ function processing() {
 
     const indefs = ["a", "an"];
     
+    let pronounct = {};
+    let prepoct = {};
+    let indefct = {};
+
+    tokens.forEach(word => {
+        // isolates the word in lowercase so that we can check if it is a pronoun, preposition or indefinite article
+        word = word.toLowerCase().replace(/[^a-zA-Z]/g, "");
+
+        if (pronouns.includes(word)) {
+            if (pronounct[word]) {
+                pronounct[word] += 1;
+            } else {
+                pronounct[word] = 1;
+            }
+        } else if (prepositions.includes(word)) {
+            if (prepoct[word]) {
+                prepoct[word] += 1;
+            } else {
+                prepoct[word] = 1;
+            }
+        } else if (indefs.includes(word)) {
+            if (indefct[word]) {
+                indefct[word] += 1;
+            } else {
+                indefct[word] = 1;
+            }
+        }
+    });
+
+    let pronounhtml = "";
+    let prepohtml = "";
+    let indefhtml = "";
+
+    pronouns.forEach(word => {
+        if (pronounct[word]) {
+            pronounhtml+=(word+": "+pronounct[word]+"<br/>");
+        }
+    });
+
+    prepositions.forEach(word => {
+        if (prepoct[word]) {
+            prepohtml+=(word+": "+prepoct[word]+"<br/>");
+        }
+    });
+
+    indefs.forEach(word => {
+        if (indefct[word]) {
+            indefhtml+=(word+": "+indefct[word]+"<br/>");
+        }
+    });
+
+    document.getElementById("pronouns").innerHTML = pronounhtml;
+    document.getElementById("prepos").innerHTML = prepohtml;
+    document.getElementById("indefs").innerHTML = indefhtml;
 }
