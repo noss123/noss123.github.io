@@ -86,7 +86,7 @@ function processing() {
 
     const pronouns = [
         "i", "you", "he", "she", "it", "we", "they",
-        "me", "you", "him", "her", "it", "us", "them",
+        "me", "him", "her", "us", "them",
         "mine", "yours", "hers", "ours", "theirs",
         "myself", "yourself", "himself", "herself", "itself", "ourselves", "yourselves", "themselves"
     ];
