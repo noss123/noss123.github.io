@@ -16,7 +16,7 @@ function ifclicked(event) {
     } else if (["p", "h1", "h2", "h3", "h4", "h5", "h6", "ul", "dl", "ol", "li", "dt", "dd", "i", "b"].includes(tag)) {
         object = "text";
     } else if (tag === "textarea") {
-        object = "textarea";
+        object = "textbox";
     } else if (tag === "button") {
         object = "button";
     } else if (tag === "header") {
